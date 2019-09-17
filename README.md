@@ -158,3 +158,7 @@ dotnet CheckPasswordConsole.dll
 ```
 # Demo
 ![](demo.gif)
+
+# References 
+[Password Entropy](https://www.pleacher.com/mp/mlessons/algebra/entropy2.html)
+[Character Frequency Analysis](https://reusablesec.blogspot.com/2009/05/character-frequency-analysis-info.html)
