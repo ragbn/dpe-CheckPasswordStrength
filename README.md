@@ -12,7 +12,7 @@ CheckStrength method of the library accepts password as string and returns json 
 
 ### Calculating Entropy Bits
 
-* Password's entropy is used to determine how unpredictable a password is. Password's entropy is calculated by finding entropy per character, which is a log base 2 of the number of characters in the character set used, multiplied by the number by the number of characters in the password itself along with character frequency analysis.    
+* Password's entropy is used to determine how unpredictable a password is. Entropy is calculated by finding an entropy per character, which is a log base 2 of the number of characters in the character set used, multiplied by the number by the number of characters in the password itself along with character frequency analysis.    
 *  E = Log2(R)*L, 
 
     R = *Pool of unique characters*<br/>  
@@ -66,7 +66,7 @@ CheckStrength method of the library accepts password as string and returns json 
 
 ## CheckPasswordStrength.Test
 
-* Tests if argument exception is thrown, when null is passed.
+* Tests if an argument exception is thrown, when null is passed.
 
 ```csharp
 
@@ -159,7 +159,7 @@ dotnet CheckPasswordConsole.dll
 ## Demo
 ![](demo.gif)
 
-##CheckPasswordStrength.API 
+## CheckPasswordStrength.API 
 * This project is to test the service layer integration with asp.net core web API.
 * Run the project and post the password in the request body.
 # References 
