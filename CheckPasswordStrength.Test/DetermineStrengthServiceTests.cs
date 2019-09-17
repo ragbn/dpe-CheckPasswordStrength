@@ -106,7 +106,7 @@ namespace CheckPasswordStrength.Test
         {
             DetermineStrengthService service = GetClient();
 
-            var commonPassword = "abc123";
+            var commonPassword = "password";
 
             var result = await service.CheckStrength(commonPassword);
             Results value = JsonConvert.DeserializeObject<Results>(result);
