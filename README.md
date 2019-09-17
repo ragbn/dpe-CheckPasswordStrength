@@ -142,14 +142,14 @@ Clone the repository to your local directory
 git clone https://github.com/raghav-xxB/dpe-CheckPasswordStrength.git
 
 ```
-Navigate to the project root and build
+Navigate to the project's root and build
 
 ```powershell
 
 dotnet build
 
 ```
-Execute the console project dll 
+Execute the CheckPasswordConsole.dll 
 
 ```powershell
 
