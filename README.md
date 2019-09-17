@@ -15,12 +15,16 @@ CheckStrength method of the library accepts password as string and returns json 
 * Password's entropy is used to to determine how unpredictable a password is. Password's entropy is calculated by finding entropy per character, which is a log base 2 of the   number of characters in the character set used, multiplied by the number by the number of characters in the password itself along with character frequency analysis.    
 *  E = Log2(R)*L, 
 
-    R = *Pool of unique characters*,
-    L = *Length of password*, 
-    Log2(R)*L = *Entropy bits*. 
+    R = *Pool of unique characters*<br/>  
+    L = *Length of password*<br/>   
+    Log2(R)*L = *Entropy bits* 
 * Password strength is categorized as 
     
-     EntropyBits <= 28 - *very weak*,  EntropyBits <= 36 *weak*,  EntropyBits <= 60 *fairly strong*,  EntropyBits <= 128 *strong*,  EntropyBits > 128 *very strong*.
+     EntropyBits <= 28 - *very weak*<br/>  
+     EntropyBits <= 36 *weak*<br/>  
+     EntropyBits <= 60 *fairly strong*<br/>  
+     EntropyBits <= 128 *strong*<br/>  
+     EntropyBits > 128 *very strong*<br/>
 
 ```csharp
 
