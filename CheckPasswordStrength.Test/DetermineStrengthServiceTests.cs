@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Net.Http;
 using DetermineStrengthServiceTests;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using CheckPasswordConsole;
 using Newtonsoft.Json;
 
