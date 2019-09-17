@@ -1,10 +1,10 @@
 # Check Password Strength
 
-This repository contains a aspnet core library, console application, Test project and Web API.
+This repository contains an asp.net core library, console application, test and Web API projects.
 
 ## CheckPasswordStrength Library 
 
-CheckStrength method of the library accepts password as string and returns json object, which consists of password entropy bits, iscommonpassword bool and number of times password appeared in breaches.
+CheckStrength method of the library accepts password as string and returns json object, which consists of password entropy bits, iscommonpassword bool and number of times the password has appeared in breaches.
 
 ```json
 {"IsCommonPassword":true,"EntropyBits":28.7,"PwnedCount":3730471}
@@ -12,7 +12,7 @@ CheckStrength method of the library accepts password as string and returns json 
 
 ### Calculating Entropy Bits
 
-* Password's entropy is used to to determine how unpredictable a password is. Password's entropy is calculated by finding entropy per character, which is a log base 2 of the   number of characters in the character set used, multiplied by the number by the number of characters in the password itself along with character frequency analysis.    
+* Password's entropy is used to determine how unpredictable a password is. Password's entropy is calculated by finding entropy per character, which is a log base 2 of the number of characters in the character set used, multiplied by the number by the number of characters in the password itself along with character frequency analysis.    
 *  E = Log2(R)*L, 
 
     R = *Pool of unique characters*<br/>  
@@ -34,15 +34,15 @@ CheckStrength method of the library accepts password as string and returns json 
 
 ### Check if password is common
 
-* Very basic compression algorithm is used, if first character is upper case then copy N letters from previous word. 
+* Very basic compression algorithm is used, if first character is in upper case then copy N letters from previous word. 
 * A variable of type string is assigned with fixed set of characters for calculation.
 
 
 
-### Finding number of time password appeared in data breach.
+### Finding number of times the password appeared in data breach.
 
 * SHA1 hash of given password will be calculated and first 5 characters are posted to https://api.pwnedpasswords.com/range/ to get breach count.
-* CheckIfPwned uses aspnet core HTTPClient factory to configure and manage instances.
+* CheckIfPwned uses asp.net core HTTPClient factory to configure and manage instances.
 
 ```csharp
 
@@ -78,7 +78,7 @@ CheckStrength method of the library accepts password as string and returns json 
 
         }
 ```
-* Test if method returns true if very common password is passed
+* Tests if method returns true if a common password is passed.
 
 ```csharp
  [Fact]
@@ -95,7 +95,7 @@ CheckStrength method of the library accepts password as string and returns json 
 
         }
 ```
-* Tests if entropy bit is greater than 128 bit, when very strong password is passed.
+* Tests if entropy is greater than 128 bits, when a very strong password is passed.
 
 ```csharp
  public async Task DetermineStrength_WhenVeryStrongPassword_ReturnEntropyBitRange()
@@ -112,7 +112,7 @@ CheckStrength method of the library accepts password as string and returns json 
         }
 ```
 
-* Tests if 0 is returned, when unbreachable password is passed
+* Tests if 0 is returned, when unbreachable password is passed.
 
 ```csharp
  [Fact]
@@ -129,36 +129,39 @@ CheckStrength method of the library accepts password as string and returns json 
 
         }
 ```
-* Many more such cases are tested.
+* Many such cases are tested.
 
 ## CheckPasswordStrengthConsole
 
 ### Getting started
 
-Clone repository to local directory 
+Clone the repository to your local directory 
 
 ```powershell
 
 git clone https://github.com/raghav-xxB/dpe-CheckPasswordStrength.git
 
 ```
-Navigate to project root and run 
+Navigate to the project root and build
 
 ```powershell
 
 dotnet build
 
 ```
-Execute the project console dll 
+Execute the console project dll 
 
 ```powershell
 
 dotnet CheckPasswordConsole.dll
 
 ```
-# Demo
+## Demo
 ![](demo.gif)
 
+##CheckPasswordStrength.API 
+* This project is to test the service layer integration with asp.net core web API.
+* Run the project and post the password in the request body.
 # References 
 [Password Entropy Concept](https://www.pleacher.com/mp/mlessons/algebra/entropy2.html)<br/>
 [Character Frequency Analysis](https://reusablesec.blogspot.com/2009/05/character-frequency-analysis-info.html)
