@@ -21,10 +21,10 @@ CheckStrength method of the library accepts password as string and returns json 
 * Password strength is categorized as 
     
      EntropyBits <= 28 - *very weak*<br/>  
-     EntropyBits <= 36 *weak*<br/>  
-     EntropyBits <= 60 *fairly strong*<br/>  
-     EntropyBits <= 128 *strong*<br/>  
-     EntropyBits > 128 *very strong*<br/>
+     EntropyBits <= 36 - *weak*<br/>  
+     EntropyBits <= 60 - *fairly strong*<br/>  
+     EntropyBits <= 128 - *strong*<br/>  
+     EntropyBits > 128 - *very strong*<br/>
 
 ```csharp
 
@@ -132,4 +132,31 @@ CheckStrength method of the library accepts password as string and returns json 
 * Many more such cases are tested.
 
 ## CheckPasswordStrengthConsole
+
+### Getting started
+
+Clone repository to local directory 
+
+```powershell
+
+git clone https://github.com/raghav-xxB/dpe-CheckPasswordStrength.git
+
+```
+Navigate to project root and run 
+
+```powershell
+
+dotnet build
+
+```
+Execute the project console dll 
+
+```powershell
+
+dotnet CheckPasswordConsole.dll
+
+```
+
+
+
   
