@@ -4,7 +4,10 @@ This repository contains a library, console application, Test project and API.
 
 # CheckPasswordStrength Library 
 
-* Calculates password entropy bits based on formula E = Log2(R^L). R = Pool of unique characters, L = Length of password, R^L = number of possible passwords, Log2(R^L) = Entropy bits. 
+* Calculates password entropy bits based on formula E = Log2(R)*L. 
+    R = Pool of unique characters
+    L = Length of password 
+    Log2(R)*L = Entropy bits. 
 
 ```csharp
 
@@ -38,7 +41,7 @@ This repository contains a library, console application, Test project and API.
 
 # CheckPasswordStrength.Test
 
-
+### Getting started
 
 # CheckPasswordStrengthConsole
   

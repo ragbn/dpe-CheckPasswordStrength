@@ -100,7 +100,7 @@ namespace CheckPasswordStrength
         internal double CalculateEntropyBit(string password)
         {
             double bits = 0;
-            double charpool = Math.Log(CalculateCharPool(password)) / Math.Log(2.0);
+            double entropy = Math.Log(CalculateCharPool(password)) / Math.Log(2.0);
             int aidx = GetIndex(password.ToLower()[0]);
             int bidx;
             try
@@ -109,7 +109,7 @@ namespace CheckPasswordStrength
                 {
                     bidx = GetIndex(password.ToLower()[i]);
                     double d = 1.0 - UtilFrequencyList.FrequencyTable[aidx * 27 + bidx];
-                    bits += charpool * d * d;
+                    bits += entropy * d * d;
                     aidx = bidx;
                 }
 
