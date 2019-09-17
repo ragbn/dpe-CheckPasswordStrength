@@ -35,20 +35,20 @@ namespace CheckPasswordConsole
                         if (password.Length <= 4)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("This is a very short password");
+                            Console.WriteLine("This is a very short password.");
                             Console.ResetColor();
                         }
                         else if (password.Length < 8)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("This is a short password");
+                            Console.WriteLine("This is a short password.");
                             Console.ResetColor();
                         }
 
                         if (results.IsCommonPassword)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("This is a common password");
+                            Console.WriteLine("This is a common password.");
                             Console.ResetColor();
                         }
 
@@ -62,7 +62,7 @@ namespace CheckPasswordConsole
                         if (results.PwnedCount == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("This password did not appear in data breaches.");
+                            Console.WriteLine("This password did not appear in the data breaches.");
                             Console.ResetColor();
                         }
 
@@ -89,7 +89,7 @@ namespace CheckPasswordConsole
                         else if (results.EntropyBits <= 128)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("This password is strong");
+                            Console.WriteLine("This password is strong.");
                             Console.ResetColor();
 
                         }
@@ -105,9 +105,14 @@ namespace CheckPasswordConsole
                         Console.ResetColor();
                     }
                 }
-                Console.WriteLine("Password cannot be empty");
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Password cannot be empty.");
+                    Console.ResetColor();
+                }
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine("Press any key to continue or esc to exit....");
+                Console.WriteLine("Press any key to continue or esc to exit...");
                 Console.ResetColor();
      
             }
