@@ -167,3 +167,6 @@ dotnet CheckPasswordConsole.dll
 [Character Frequency Analysis](https://reusablesec.blogspot.com/2009/05/character-frequency-analysis-info.html)<br/>
 [Tony Hunt's Blog](https://www.troyhunt.com/authentication-and-the-have-i-been-pwned-api/)<br/>
 [Andrew Locks PwnedPassword](https://github.com/andrewlock/PwnedPasswords)
+
+# Note
+Repro moved from Azure devops tenant to github.com.
