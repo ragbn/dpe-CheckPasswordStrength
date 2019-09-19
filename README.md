@@ -165,3 +165,5 @@ dotnet CheckPasswordConsole.dll
 # References 
 [Password Entropy Concept](https://www.pleacher.com/mp/mlessons/algebra/entropy2.html)<br/>
 [Character Frequency Analysis](https://reusablesec.blogspot.com/2009/05/character-frequency-analysis-info.html)
+[Tony Hunt's Blog](https://www.troyhunt.com/authentication-and-the-have-i-been-pwned-api/)
+[Andrew Locks PwnedPassword](https://github.com/andrewlock/PwnedPasswords)
