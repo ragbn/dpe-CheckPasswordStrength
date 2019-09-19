@@ -169,4 +169,4 @@ dotnet CheckPasswordConsole.dll
 [Andrew Locks PwnedPassword](https://github.com/andrewlock/PwnedPasswords)
 
 # Note
-Repro moved from Azure devops tenant to github.com.
+Repo moved from Azure devops tenant to github.com.
